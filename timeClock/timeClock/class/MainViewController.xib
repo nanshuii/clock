@@ -88,15 +88,26 @@
                                         <constraint firstAttribute="bottom" secondItem="67G-xQ-381" secondAttribute="bottom" id="o9a-uU-mna"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ayh-aY-nqU">
+                                    <rect key="frame" x="0.0" y="115" width="500" height="10"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="wQM-9j-45d"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="Qgt-va-x89" firstAttribute="leading" secondItem="2E1-8U-sDT" secondAttribute="trailing" constant="20" id="9vH-Fh-yuY"/>
+                                <constraint firstItem="Ayh-aY-nqU" firstAttribute="width" secondItem="2E1-8U-sDT" secondAttribute="height" multiplier="25:12" id="COf-wa-KMN"/>
+                                <constraint firstAttribute="trailing" secondItem="Ayh-aY-nqU" secondAttribute="trailing" id="Cqb-ba-QCl"/>
                                 <constraint firstAttribute="bottom" secondItem="Qgt-va-x89" secondAttribute="bottom" id="Lgg-O9-pFc"/>
                                 <constraint firstItem="2E1-8U-sDT" firstAttribute="top" secondItem="HXR-I8-Pa3" secondAttribute="top" id="aek-Wh-zaN"/>
                                 <constraint firstAttribute="trailing" secondItem="Qgt-va-x89" secondAttribute="trailing" id="eiG-HZ-44B"/>
                                 <constraint firstAttribute="bottom" secondItem="2E1-8U-sDT" secondAttribute="bottom" id="fjm-Ok-U2i"/>
                                 <constraint firstItem="Qgt-va-x89" firstAttribute="top" secondItem="HXR-I8-Pa3" secondAttribute="top" id="hdd-gj-fdh"/>
+                                <constraint firstItem="Ayh-aY-nqU" firstAttribute="leading" secondItem="HXR-I8-Pa3" secondAttribute="leading" id="pAv-je-ah1"/>
+                                <constraint firstItem="Ayh-aY-nqU" firstAttribute="centerY" secondItem="HXR-I8-Pa3" secondAttribute="centerY" id="qkB-y2-oVH"/>
                                 <constraint firstItem="2E1-8U-sDT" firstAttribute="leading" secondItem="HXR-I8-Pa3" secondAttribute="leading" id="uFg-uH-2Ha"/>
                             </constraints>
                         </view>

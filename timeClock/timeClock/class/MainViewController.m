@@ -28,6 +28,8 @@
 - (void)setUpUI{
     self.hourView.layer.cornerRadius = 10;
     self.minuteView.layer.cornerRadius = 10;
+    self.hour = @"00";
+    self.minute = @"00";
     [self getTimeFormat];
     self.formatAll = NO;
     [self getCurrentDate];
@@ -82,13 +84,8 @@
     NSArray *times = [timeString componentsSeparatedByString:@":"];
     NSString *hourString = times[0];
     NSString *minuteString = times[1];
-    [self timeShow:hourString minute:minuteString];
-}
-
-# pragma mark -- 显示时间
-- (void)timeShow:(NSString *)hour minute:(NSString *)minute{
-    int hourValue = [hour intValue];
-//    int minuteValue = [minute intValue];
+    int hourValue = [hourString intValue];
+//    int minuteValue = [minuteString intValue];
     if (self.formatAll == NO) {
         // 标记上下午
         NSString *am = @"AM";
@@ -98,22 +95,28 @@
             NSString *hourString = [NSString stringWithFormat:@"%i", hourValue];
             if (hourValue < 9) {
                 hourString = [NSString stringWithFormat:@"0%@", hourString];
-                hour = hourString;
             }
         }
-        NSString *string = self.dateLabel.text;
-        self.dateLabel.text = [NSString stringWithFormat:@"%@ %@", string, am];
+        self.dateLabel.text = [NSString stringWithFormat:@"%@ %@", dayString, am];
     }
-    self.hour = hour;
-    self.minute = minute;
-    if (self.hour && self.minute) {
-        self.hourLabel.text = hour;
-        self.minuteLabel.text = minute;
-    } else {
-        self.hourLabel.text = hour;
-        self.minuteLabel.text = minute;
+    if (![self.hour isEqualToString:hourString]) {
+        self.hour = hourString;
+        [UIView transitionWithView:self.minuteView duration:1.0 options:(UIViewAnimationOptionTransitionCurlDown) animations:^{
+            self.hourLabel.text = hourString;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
+    if (![self.minute isEqualToString:minuteString]) {
+        self.minute = minuteString;
+        [UIView transitionWithView:self.minuteView duration:1.0 options:(UIViewAnimationOptionTransitionCurlDown) animations:^{
+            self.minuteLabel.text = minuteString;
+        } completion:^(BOOL finished) {
+            
+        }];
     }
 }
+
 
 
 
