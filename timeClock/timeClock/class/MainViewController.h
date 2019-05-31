@@ -12,6 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainViewController : UIViewController
 
+// 中间的时间文字
+@property (weak, nonatomic) IBOutlet UIView *hourView;
+@property (weak, nonatomic) IBOutlet UILabel *hourLabel;
+@property (weak, nonatomic) IBOutlet UIView *minuteView;
+@property (weak, nonatomic) IBOutlet UILabel *minuteLabel;
+
+// 当前年月日
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

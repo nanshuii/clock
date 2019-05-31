@@ -24,9 +24,9 @@
     return YES;
 }
 
-- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window{
-    return UIInterfaceOrientationMaskLandscapeRight;
-}
+//- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window{
+//    return UIInterfaceOrientationMaskLandscapeRight;
+//}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
