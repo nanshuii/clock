@@ -10,6 +10,8 @@
 #define LENPublicHeader_h
 
 
+#define WEAKSELF(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
 # pragma mark -- 屏幕参数
 // 全屏的宽度
 #define kFullScreenWidth           ([UIScreen mainScreen].bounds.size.width)
@@ -30,10 +32,19 @@
 
 
 # pragma mark -- 自定义的存储变量
-#define kTimeFormat @"kTimeFormat" 
+#define kTimeFormat @"kTimeFormat"  // 24小时制 BOOL YES 24小时
+#define KShowYearMonthDay @"KShowYearMonthDay" // 显示年月日
+#define kShowAM @"kShowAM" // 显示上下午
+#define kShowWeek @"kShowWeek" // 显示星期
+#define kShowHourTiming @"kShowHourTiming" // 显示整点报时
+#define kHourTiming @"kHourTiming" // 是否开启整点报时
+#define KHourTimingHiddenType @"KHourTimingHiddenType" // 免到扰时间类型
+#define kHourTimingIdentifier @"kHourTimingIdentifier" // 整点报时通知的identifier
+#define kHourTimingHours @"kHourTimingHours" // 目前已经注册的时间通知
 
 
-
+# pragma mark -- 自定义的通知时间
+#define kMainViewControllerUpdate @"kMainViewControllerUpdate" // 主页的值发生变化
 
 
 

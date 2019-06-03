@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6961B73F3769AD45BE81312 /* libPods-timeClock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FF2405D0D8E237E4B3B65E /* libPods-timeClock.a */; };
 		D35ED9DE22A0C65900801785 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35ED9DC22A0C65900801785 /* MainViewController.m */; };
 		D35ED9DF22A0C65900801785 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35ED9DD22A0C65900801785 /* MainViewController.xib */; };
+		D35ED9E322A12FCE00801785 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35ED9E122A12FCE00801785 /* SettingViewController.m */; };
+		D35ED9E422A12FCE00801785 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35ED9E222A12FCE00801785 /* SettingViewController.xib */; };
+		D35ED9EB22A1321B00801785 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D35ED9E922A1321B00801785 /* SettingTableViewCell.m */; };
+		D35ED9EC22A1321B00801785 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35ED9EA22A1321B00801785 /* SettingTableViewCell.xib */; };
+		D35ED9F022A2476400801785 /* SettingInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35ED9EE22A2476400801785 /* SettingInfoViewController.m */; };
+		D35ED9F122A2476400801785 /* SettingInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35ED9EF22A2476400801785 /* SettingInfoViewController.xib */; };
+		D35ED9F422A24A5400801785 /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D35ED9F322A24A5400801785 /* UserDefaults.m */; };
 		D3EA31B322A0C17B00953827 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EA31B222A0C17B00953827 /* AppDelegate.m */; };
 		D3EA31B622A0C17B00953827 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EA31B522A0C17B00953827 /* ViewController.m */; };
 		D3EA31B922A0C17B00953827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EA31B722A0C17B00953827 /* Main.storyboard */; };
@@ -37,11 +45,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7FF2405D0D8E237E4B3B65E /* libPods-timeClock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-timeClock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35ED9D422A0C25400801785 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D35ED9D522A0C57E00801785 /* LENPublicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENPublicHeader.h; sourceTree = "<group>"; };
 		D35ED9DB22A0C65900801785 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D35ED9DC22A0C65900801785 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D35ED9DD22A0C65900801785 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		D35ED9E022A12FCE00801785 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		D35ED9E122A12FCE00801785 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		D35ED9E222A12FCE00801785 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		D35ED9E822A1321B00801785 /* SettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
+		D35ED9E922A1321B00801785 /* SettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
+		D35ED9EA22A1321B00801785 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		D35ED9ED22A2476400801785 /* SettingInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingInfoViewController.h; sourceTree = "<group>"; };
+		D35ED9EE22A2476400801785 /* SettingInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingInfoViewController.m; sourceTree = "<group>"; };
+		D35ED9EF22A2476400801785 /* SettingInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingInfoViewController.xib; sourceTree = "<group>"; };
+		D35ED9F222A24A5400801785 /* UserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
+		D35ED9F322A24A5400801785 /* UserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
+		D3CD62C922A2D95300F80B0D /* timeClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = timeClock.entitlements; sourceTree = "<group>"; };
 		D3EA31AE22A0C17B00953827 /* timeClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timeClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EA31B122A0C17B00953827 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3EA31B222A0C17B00953827 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +79,8 @@
 		D3EA31D122A0C17D00953827 /* timeClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = timeClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EA31D522A0C17D00953827 /* timeClockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = timeClockUITests.m; sourceTree = "<group>"; };
 		D3EA31D722A0C17D00953827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1DB6DA98CD5B98AA9BBFD6B /* Pods-timeClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-timeClock/Pods-timeClock.release.xcconfig"; sourceTree = "<group>"; };
+		E78EE27769BA33212FB563A6 /* Pods-timeClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-timeClock/Pods-timeClock.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6961B73F3769AD45BE81312 /* libPods-timeClock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,14 +109,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90932DA01C90A8A5E371093C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7FF2405D0D8E237E4B3B65E /* libPods-timeClock.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		971A7F2F9B51A9C85D466681 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E78EE27769BA33212FB563A6 /* Pods-timeClock.debug.xcconfig */,
+				E1DB6DA98CD5B98AA9BBFD6B /* Pods-timeClock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D35ED9D322A0C1CD00801785 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				D35ED9E522A131D400801785 /* controllers */,
+				D35ED9E722A131E600801785 /* models */,
+				D35ED9E622A131DF00801785 /* views */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		D35ED9E522A131D400801785 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				D35ED9DB22A0C65900801785 /* MainViewController.h */,
 				D35ED9DC22A0C65900801785 /* MainViewController.m */,
 				D35ED9DD22A0C65900801785 /* MainViewController.xib */,
+				D35ED9E022A12FCE00801785 /* SettingViewController.h */,
+				D35ED9E122A12FCE00801785 /* SettingViewController.m */,
+				D35ED9E222A12FCE00801785 /* SettingViewController.xib */,
+				D35ED9ED22A2476400801785 /* SettingInfoViewController.h */,
+				D35ED9EE22A2476400801785 /* SettingInfoViewController.m */,
+				D35ED9EF22A2476400801785 /* SettingInfoViewController.xib */,
 			);
-			path = class;
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		D35ED9E622A131DF00801785 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D35ED9E822A1321B00801785 /* SettingTableViewCell.h */,
+				D35ED9E922A1321B00801785 /* SettingTableViewCell.m */,
+				D35ED9EA22A1321B00801785 /* SettingTableViewCell.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		D35ED9E722A131E600801785 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D35ED9F222A24A5400801785 /* UserDefaults.h */,
+				D35ED9F322A24A5400801785 /* UserDefaults.m */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		D3EA31A522A0C17B00953827 = {
@@ -102,6 +178,8 @@
 				D3EA31C922A0C17D00953827 /* timeClockTests */,
 				D3EA31D422A0C17D00953827 /* timeClockUITests */,
 				D3EA31AF22A0C17B00953827 /* Products */,
+				971A7F2F9B51A9C85D466681 /* Pods */,
+				90932DA01C90A8A5E371093C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +196,7 @@
 		D3EA31B022A0C17B00953827 /* timeClock */ = {
 			isa = PBXGroup;
 			children = (
+				D3CD62C922A2D95300F80B0D /* timeClock.entitlements */,
 				D35ED9D322A0C1CD00801785 /* class */,
 				D3EA31B122A0C17B00953827 /* AppDelegate.h */,
 				D3EA31B222A0C17B00953827 /* AppDelegate.m */,
@@ -159,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3EA31DA22A0C17D00953827 /* Build configuration list for PBXNativeTarget "timeClock" */;
 			buildPhases = (
+				C7DAF6FC428AE4C90C63B163 /* [CP] Check Pods Manifest.lock */,
 				D3EA31AA22A0C17B00953827 /* Sources */,
 				D3EA31AB22A0C17B00953827 /* Frameworks */,
 				D3EA31AC22A0C17B00953827 /* Resources */,
@@ -219,6 +299,14 @@
 				TargetAttributes = {
 					D3EA31AD22A0C17B00953827 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					D3EA31C522A0C17D00953827 = {
 						CreatedOnToolsVersion = 10.2;
@@ -256,7 +344,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3EA31BE22A0C17D00953827 /* LaunchScreen.storyboard in Resources */,
+				D35ED9E422A12FCE00801785 /* SettingViewController.xib in Resources */,
+				D35ED9EC22A1321B00801785 /* SettingTableViewCell.xib in Resources */,
 				D3EA31BB22A0C17D00953827 /* Assets.xcassets in Resources */,
+				D35ED9F122A2476400801785 /* SettingInfoViewController.xib in Resources */,
 				D3EA31B922A0C17B00953827 /* Main.storyboard in Resources */,
 				D35ED9DF22A0C65900801785 /* MainViewController.xib in Resources */,
 			);
@@ -278,15 +369,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C7DAF6FC428AE4C90C63B163 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-timeClock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3EA31AA22A0C17B00953827 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35ED9F422A24A5400801785 /* UserDefaults.m in Sources */,
 				D3EA31B622A0C17B00953827 /* ViewController.m in Sources */,
 				D3EA31C122A0C17D00953827 /* main.m in Sources */,
+				D35ED9EB22A1321B00801785 /* SettingTableViewCell.m in Sources */,
 				D3EA31B322A0C17B00953827 /* AppDelegate.m in Sources */,
+				D35ED9F022A2476400801785 /* SettingInfoViewController.m in Sources */,
 				D35ED9DE22A0C65900801785 /* MainViewController.m in Sources */,
+				D35ED9E322A12FCE00801785 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,8 +575,10 @@
 		};
 		D3EA31DB22A0C17D00953827 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E78EE27769BA33212FB563A6 /* Pods-timeClock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = timeClock/timeClock.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DF2WD834FA;
@@ -467,7 +589,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ledon.richard.timeClock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ledon.richard.clock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,8 +598,10 @@
 		};
 		D3EA31DC22A0C17D00953827 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1DB6DA98CD5B98AA9BBFD6B /* Pods-timeClock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = timeClock/timeClock.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DF2WD834FA;
@@ -488,7 +612,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ledon.richard.timeClock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ledon.richard.clock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

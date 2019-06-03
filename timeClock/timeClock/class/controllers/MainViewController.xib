@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -117,11 +118,20 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SY8-vg-ow1">
+                            <rect key="frame" x="822" y="42.5" width="24" height="24"/>
+                            <state key="normal" image="setting"/>
+                            <connections>
+                                <action selector="toSetting:" destination="-1" eventType="touchUpInside" id="AE9-Q8-j74"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="SY8-vg-ow1" firstAttribute="centerY" secondItem="xrL-LN-hVk" secondAttribute="centerY" id="6OQ-wm-HpM"/>
                         <constraint firstItem="xrL-LN-hVk" firstAttribute="leading" secondItem="HXR-I8-Pa3" secondAttribute="leading" id="AU2-MH-9xz"/>
                         <constraint firstItem="HXR-I8-Pa3" firstAttribute="top" secondItem="xrL-LN-hVk" secondAttribute="bottom" constant="22" id="Ra8-oD-H2t"/>
+                        <constraint firstAttribute="trailing" secondItem="SY8-vg-ow1" secondAttribute="trailing" constant="50" id="XhO-yx-zX6"/>
                         <constraint firstItem="HXR-I8-Pa3" firstAttribute="centerX" secondItem="hoG-nK-lJe" secondAttribute="centerX" id="dSN-SV-y8P"/>
                         <constraint firstItem="HXR-I8-Pa3" firstAttribute="centerY" secondItem="hoG-nK-lJe" secondAttribute="centerY" id="gYU-eP-itI"/>
                     </constraints>
@@ -135,7 +145,11 @@
                 <constraint firstItem="hoG-nK-lJe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nWW-B6-naW"/>
                 <constraint firstItem="2E1-8U-sDT" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="40:69" id="shK-Rq-0vb"/>
             </constraints>
+            <viewLayoutGuide key="safeArea" id="Xz7-3k-B3R"/>
             <point key="canvasLocation" x="22.767857142857142" y="76.811594202898561"/>
         </view>
     </objects>
+    <resources>
+        <image name="setting" width="24" height="24"/>
+    </resources>
 </document>
