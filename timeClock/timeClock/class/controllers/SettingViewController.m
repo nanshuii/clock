@@ -9,7 +9,7 @@
 #import "SettingViewController.h"
 #import "SettingTableViewCell.h"
 #import "SettingInfoViewController.h"
-#import "TimeClockViewController.h"
+#import "TimerViewController.h"
 
 @interface SettingViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -34,7 +34,7 @@
 }
 
 - (void)setUpUI{
-    self.texts = @[@"页面设置", @"24小时制",  @"报时设置"];
+    self.texts = @[@"页面设置", @"24小时制",  @"计时器"];
     self.names = @[@"setting", @"setting", @"setting"];
     self.ons = [NSMutableArray arrayWithCapacity:3];
     [self.ons addObject:@(-1)];
@@ -90,7 +90,7 @@
         SettingInfoViewController *vc = [SettingInfoViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.section == 0 && indexPath.row == 2) {
-        TimeClockViewController *vc = [TimeClockViewController new];
+        TimerViewController *vc = [TimerViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

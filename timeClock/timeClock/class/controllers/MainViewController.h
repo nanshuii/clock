@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 当前年月日
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
+// 定时器按钮
+@property (weak, nonatomic) IBOutlet UIButton *timerButton;
+
 
 @end
 

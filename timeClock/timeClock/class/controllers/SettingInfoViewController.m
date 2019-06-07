@@ -30,8 +30,8 @@
 }
 
 - (void)setUpUI{
-    self.texts = @[@"显示年月日", @"显示上下午", @"显示星期"];
-    self.names = @[@"setting", @"setting", @"setting"];
+    self.texts = @[@"显示年月日", @"显示上下午", @"显示星期", @"显示定时器"];
+    self.names = @[@"setting", @"setting", @"setting", @"setting"];
     self.ons = [NSMutableArray arrayWithCapacity:3];
     BOOL showYearMonthDay = [UserDefaults getShowYearMonthDay];
     if (showYearMonthDay) {
@@ -52,6 +52,12 @@
     }
     BOOL showWeek = [UserDefaults getShowWeek];
     if (showWeek) {
+        [self.ons addObject:@(1)];
+    } else {
+        [self.ons addObject:@(0)];
+    }
+    BOOL showTimer = [UserDefaults getShowTimer];
+    if (showTimer) {
         [self.ons addObject:@(1)];
     } else {
         [self.ons addObject:@(0)];
@@ -123,6 +129,15 @@
         [UserDefaults setShowWeek:on];
         NSDictionary *dict = @{
                                @"type": @"week",
+                               @"value": @(on),
+                               };
+        [[NSNotificationCenter defaultCenter] postNotificationName:kMainViewControllerUpdate object:dict];
+    }
+    else if (index == 3) {
+        // 定时器
+        [UserDefaults setShowTimer:on];
+        NSDictionary *dict = @{
+                               @"type": @"timer",
                                @"value": @(on),
                                };
         [[NSNotificationCenter defaultCenter] postNotificationName:kMainViewControllerUpdate object:dict];

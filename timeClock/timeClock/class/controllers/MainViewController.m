@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "SettingViewController.h"
+#import "TimerViewController.h"
 
 @interface MainViewController ()
 
@@ -18,6 +19,10 @@
 @property (nonatomic, assign) BOOL showYearMonthDay;
 @property (nonatomic, assign) BOOL showAm;
 @property (nonatomic, assign) BOOL showWeek;
+@property (nonatomic, assign) BOOL showTimer;
+@property (nonatomic, strong) NSTimer *timerTimer; // 定时器的定时器
+@property (nonatomic, strong) TimerModel *timerModel;
+@property (nonatomic, assign) int remainingTime;
 
 @end
 
@@ -27,21 +32,53 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(valueUpdate:) name:kMainViewControllerUpdate object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBecomeActive) name:kApplicationDidBecomeActive object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WillResignActive) name:kApplicationWillResignActive object:nil];
     [self setUpUI];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.showTimer = [UserDefaults getShowTimer];
+    self.timerButton.hidden = !self.showTimer;
+    if (self.showTimer) {
+        [self timerInit];
+    }
 }
 
 - (void)setUpUI{
     [self.navigationController setNavigationBarHidden:YES];
     self.hourView.layer.cornerRadius = 14;
     self.minuteView.layer.cornerRadius = 14;
-    self.hour = @"00";
-    self.minute = @"00";
+    self.hour = @"xx";
+    self.minute = @"xx";
     self.formatAll = [UserDefaults getTimeFormat];
     self.showYearMonthDay = [UserDefaults getShowYearMonthDay];
     self.showAm = [UserDefaults getShowAm];
     self.showWeek = [UserDefaults getShowWeek];
     [self getCurrentDate];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(getCurrentDate) userInfo:nil repeats:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self timerTimerStop];
+}
+
+# pragma mark -- 程序进入前台
+- (void)didBecomeActive{
+    NSLog(@"进入前台");
+    self.showTimer = [UserDefaults getShowTimer];
+    self.timerButton.hidden = !self.showTimer;
+    if (self.showTimer) {
+        [self timerInit];
+    }
+}
+
+# pragma mark -- 进入前台
+- (void)WillResignActive{
+    [self timerTimerStop];
+    [self.timerButton setTitle:nil forState:normal];
 }
 
 # pragma mark -- 获取时间格式
@@ -127,7 +164,7 @@
     [self changeHour:hourString mintute:minuteString];
 }
 
-# pragma mark -- 动画效果
+# pragma mark -- 时间跳动动画效果
 - (void)changeHour:(NSString *)hourString mintute:(NSString *)minuteString{
     if (![self.hour isEqualToString:hourString]) {
         self.hour = hourString;
@@ -147,6 +184,79 @@
     }
 }
 
+# pragma mark -- 读取定时器model
+- (void)timerInit{
+    TimerModel *model = [UserDefaults getTimerModel];
+    if (model) {
+        // 比对date
+        NSDate *date = [NSDate new];
+        long timestamp = [date timeIntervalSince1970];
+        long timestamp2 = [model.date timeIntervalSince1970];
+        NSLog(@"timestamp = %li %li", timestamp, timestamp2);
+        if (timestamp >= timestamp2) {
+            [self timerTimerStop];
+            [self.timerButton setTitle:nil forState:normal];
+            [UserDefaults deleteTimerModel];
+        } else {
+            self.timerModel = model;
+            self.remainingTime = model.remainingTime;
+            [self timerTimerCreate];
+        }
+    } else {
+        [self.timerButton setTitle:nil forState:normal];
+    }
+}
+
+- (void)timerTimerCreate{
+    if (!_timerTimer) {
+        _timerTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTimerAction) userInfo:nil repeats:YES];
+    }
+}
+
+- (void)timerTimerAction{
+    NSLog(@"remain time = %i", self.remainingTime);
+    self.remainingTime--;
+    if (self.remainingTime == 0) {
+        [self timerTimerStop];
+        [self.timerButton setTitle:nil forState:normal];
+        [UserDefaults deleteTimerModel];
+        return;
+    }
+    NSInteger time = self.remainingTime;
+    NSInteger hour = time / 60 / 60;
+    NSString *hourString = [NSString stringWithFormat:@"%li", (long)hour];
+    if (hour < 10) {
+        hourString = [NSString stringWithFormat:@"0%@", hourString];
+    }
+    NSInteger time2 = time - hour * 60 * 60;
+    NSInteger minute = time2 / 60;
+    NSString *minuteString = [NSString stringWithFormat:@"%li", (long)minute];
+    if (minute < 10) {
+        minuteString = [NSString stringWithFormat:@"0%@", minuteString];
+    }
+    NSInteger second = time2 % 60;
+    NSString *secondString = [NSString stringWithFormat:@"%li", (long)second];
+    if (second < 10) {
+        secondString = [NSString stringWithFormat:@"0%@", secondString];
+    }
+    NSString *timeString = [NSString stringWithFormat:@"%@:%@:%@", hourString, minuteString, secondString];
+    [self.timerButton setTitle:timeString forState:normal];
+    [self saveModel];
+}
+
+- (void)saveModel{
+    self.timerModel.remainingTime = self.remainingTime;
+    [UserDefaults setTimerModel:self.timerModel];
+}
+
+- (void)timerTimerStop{
+    if (_timerTimer) {
+        [_timerTimer invalidate];
+        _timerTimer = nil;
+    }
+}
+
+
 # pragma mark -- value update
 - (void)valueUpdate:(NSNotification *)noti{
     NSDictionary *dict = noti.object;
@@ -165,12 +275,24 @@
         else if ([type isEqualToString:@"yearMonthDay"]) {
             self.showYearMonthDay = value;
         }
+        else if ([type isEqualToString:@"timer"]) {
+            self.showTimer = value;
+            if (value) {
+                [self.timerButton setTitle:nil forState:normal];
+            }
+        }
     }
 }
 
 # pragma mark -- 前往设置页面
 - (IBAction)toSetting:(id)sender {
     SettingViewController *vc = [SettingViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+# pragma mark -- 前往定时器页面
+- (IBAction)toTimer:(id)sender {
+    TimerViewController *vc = [TimerViewController new];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

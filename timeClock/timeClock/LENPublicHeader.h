@@ -36,16 +36,15 @@
 #define KShowYearMonthDay @"KShowYearMonthDay" // 显示年月日
 #define kShowAM @"kShowAM" // 显示上下午
 #define kShowWeek @"kShowWeek" // 显示星期
-#define kShowHourTiming @"kShowHourTiming" // 显示整点报时
-#define kHourTiming @"kHourTiming" // 是否开启整点报时
-#define KHourTimingHiddenType @"KHourTimingHiddenType" // 免到扰时间类型
-#define kHourTimingIdentifier @"kHourTimingIdentifier" // 整点报时通知的identifier
-#define kHourTimingHours @"kHourTimingHours" // 目前已经注册的时间通知
+#define kShowTimer @"kShowTimer" // 显示定时器
+#define kTimerModel @"kTimerModel" // 计时器model
+#define kTimerIdentifier @"kTimerIdentifier" // 计时器identifier
 
 
 # pragma mark -- 自定义的通知时间
 #define kMainViewControllerUpdate @"kMainViewControllerUpdate" // 主页的值发生变化
-
+#define kApplicationWillResignActive @"kApplicationWillResignActive" // 程序即将进入后台
+#define kApplicationDidBecomeActive @"kApplicationDidBecomeActive" // 程序已经进入前台
 
 
 

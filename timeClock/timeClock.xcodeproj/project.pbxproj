@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C6961B73F3769AD45BE81312 /* libPods-timeClock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FF2405D0D8E237E4B3B65E /* libPods-timeClock.a */; };
+		D3201DDE22AAC7A000510F61 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3201DDD22AAC7A000510F61 /* NotificationManager.m */; };
 		D35ED9DE22A0C65900801785 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35ED9DC22A0C65900801785 /* MainViewController.m */; };
 		D35ED9DF22A0C65900801785 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35ED9DD22A0C65900801785 /* MainViewController.xib */; };
 		D35ED9E322A12FCE00801785 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35ED9E122A12FCE00801785 /* SettingViewController.m */; };
@@ -17,6 +18,10 @@
 		D35ED9F022A2476400801785 /* SettingInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35ED9EE22A2476400801785 /* SettingInfoViewController.m */; };
 		D35ED9F122A2476400801785 /* SettingInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35ED9EF22A2476400801785 /* SettingInfoViewController.xib */; };
 		D35ED9F422A24A5400801785 /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D35ED9F322A24A5400801785 /* UserDefaults.m */; };
+		D3B18A6E22AAA22700D60181 /* LENCycleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B18A6D22AAA22600D60181 /* LENCycleProgressView.m */; };
+		D3BA1F3022AA605200F4A30D /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BA1F2E22AA605200F4A30D /* TimerViewController.m */; };
+		D3BA1F3122AA605200F4A30D /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BA1F2F22AA605200F4A30D /* TimerViewController.xib */; };
+		D3BA1F3422AA621A00F4A30D /* TimerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BA1F3322AA621A00F4A30D /* TimerModel.m */; };
 		D3EA31B322A0C17B00953827 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EA31B222A0C17B00953827 /* AppDelegate.m */; };
 		D3EA31B622A0C17B00953827 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EA31B522A0C17B00953827 /* ViewController.m */; };
 		D3EA31B922A0C17B00953827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EA31B722A0C17B00953827 /* Main.storyboard */; };
@@ -46,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		A7FF2405D0D8E237E4B3B65E /* libPods-timeClock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-timeClock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3201DDC22AAC7A000510F61 /* NotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
+		D3201DDD22AAC7A000510F61 /* NotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
 		D35ED9D422A0C25400801785 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D35ED9D522A0C57E00801785 /* LENPublicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENPublicHeader.h; sourceTree = "<group>"; };
 		D35ED9DB22A0C65900801785 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -62,6 +69,13 @@
 		D35ED9EF22A2476400801785 /* SettingInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingInfoViewController.xib; sourceTree = "<group>"; };
 		D35ED9F222A24A5400801785 /* UserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
 		D35ED9F322A24A5400801785 /* UserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
+		D3B18A6C22AAA22600D60181 /* LENCycleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LENCycleProgressView.h; sourceTree = "<group>"; };
+		D3B18A6D22AAA22600D60181 /* LENCycleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LENCycleProgressView.m; sourceTree = "<group>"; };
+		D3BA1F2D22AA605200F4A30D /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		D3BA1F2E22AA605200F4A30D /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		D3BA1F2F22AA605200F4A30D /* TimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
+		D3BA1F3222AA621A00F4A30D /* TimerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerModel.h; sourceTree = "<group>"; };
+		D3BA1F3322AA621A00F4A30D /* TimerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerModel.m; sourceTree = "<group>"; };
 		D3CD62C922A2D95300F80B0D /* timeClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = timeClock.entitlements; sourceTree = "<group>"; };
 		D3EA31AE22A0C17B00953827 /* timeClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timeClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EA31B122A0C17B00953827 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +162,9 @@
 				D35ED9ED22A2476400801785 /* SettingInfoViewController.h */,
 				D35ED9EE22A2476400801785 /* SettingInfoViewController.m */,
 				D35ED9EF22A2476400801785 /* SettingInfoViewController.xib */,
+				D3BA1F2D22AA605200F4A30D /* TimerViewController.h */,
+				D3BA1F2E22AA605200F4A30D /* TimerViewController.m */,
+				D3BA1F2F22AA605200F4A30D /* TimerViewController.xib */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -155,6 +172,8 @@
 		D35ED9E622A131DF00801785 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D3B18A6C22AAA22600D60181 /* LENCycleProgressView.h */,
+				D3B18A6D22AAA22600D60181 /* LENCycleProgressView.m */,
 				D35ED9E822A1321B00801785 /* SettingTableViewCell.h */,
 				D35ED9E922A1321B00801785 /* SettingTableViewCell.m */,
 				D35ED9EA22A1321B00801785 /* SettingTableViewCell.xib */,
@@ -167,6 +186,10 @@
 			children = (
 				D35ED9F222A24A5400801785 /* UserDefaults.h */,
 				D35ED9F322A24A5400801785 /* UserDefaults.m */,
+				D3BA1F3222AA621A00F4A30D /* TimerModel.h */,
+				D3BA1F3322AA621A00F4A30D /* TimerModel.m */,
+				D3201DDC22AAC7A000510F61 /* NotificationManager.h */,
+				D3201DDD22AAC7A000510F61 /* NotificationManager.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -343,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BA1F3122AA605200F4A30D /* TimerViewController.xib in Resources */,
 				D3EA31BE22A0C17D00953827 /* LaunchScreen.storyboard in Resources */,
 				D35ED9E422A12FCE00801785 /* SettingViewController.xib in Resources */,
 				D35ED9EC22A1321B00801785 /* SettingTableViewCell.xib in Resources */,
@@ -400,11 +424,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35ED9F422A24A5400801785 /* UserDefaults.m in Sources */,
+				D3B18A6E22AAA22700D60181 /* LENCycleProgressView.m in Sources */,
 				D3EA31B622A0C17B00953827 /* ViewController.m in Sources */,
 				D3EA31C122A0C17D00953827 /* main.m in Sources */,
+				D3BA1F3022AA605200F4A30D /* TimerViewController.m in Sources */,
 				D35ED9EB22A1321B00801785 /* SettingTableViewCell.m in Sources */,
+				D3201DDE22AAC7A000510F61 /* NotificationManager.m in Sources */,
 				D3EA31B322A0C17B00953827 /* AppDelegate.m in Sources */,
 				D35ED9F022A2476400801785 /* SettingInfoViewController.m in Sources */,
+				D3BA1F3422AA621A00F4A30D /* TimerModel.m in Sources */,
 				D35ED9DE22A0C65900801785 /* MainViewController.m in Sources */,
 				D35ED9E322A12FCE00801785 /* SettingViewController.m in Sources */,
 			);

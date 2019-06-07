@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TimerModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -68,6 +69,39 @@ NS_ASSUME_NONNULL_BEGIN
  @param show BOOL
  */
 + (void)setShowWeek:(BOOL)show;
+
+/**
+ 获取计时器model
+
+ @return return value description
+ */
++ (TimerModel *)getTimerModel;
+
+/**
+ 设置计时器model
+
+ @param model model description
+ */
++ (void)setTimerModel:(TimerModel *)model;
+
+/**
+ 移除计时器model
+ */
++ (void)deleteTimerModel;
+
+/**
+ 获取是否显示定时器
+
+ @return return value description
+ */
++ (BOOL)getShowTimer;
+
+/**
+ 设置是否显示定时器
+
+ @param timer timer description
+ */
++ (void)setShowTimer:(BOOL)timer;
 
 @end
 

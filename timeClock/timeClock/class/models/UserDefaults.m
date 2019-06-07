@@ -110,5 +110,67 @@
     [defaults synchronize];
 }
 
+/**
+ 获取计时器model
+ 
+ @return return value description
+ */
++ (TimerModel *)getTimerModel{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults valueForKey:kTimerModel]) {
+        NSDictionary *dict = [defaults valueForKey:kTimerModel];
+        TimerModel *model = [TimerModel mj_objectWithKeyValues:dict];
+        return model;
+    } else {
+        return nil;
+    }
+}
+
+/**
+ 设置计时器model
+ 
+ @param model model description
+ */
++ (void)setTimerModel:(TimerModel *)model{
+    NSDictionary *dict = [model mj_keyValues];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:dict forKey:kTimerModel];
+    [defaults synchronize];
+}
+
+/**
+ 移除计时器model
+ */
++ (void)deleteTimerModel{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:kTimerModel];
+    [defaults synchronize];
+}
+
+/**
+ 获取是否显示定时器
+ 
+ @return return value description
+ */
++ (BOOL)getShowTimer{
+    BOOL show = YES;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults valueForKey:kShowTimer]) {
+        show = [[defaults valueForKey:kShowTimer] boolValue];
+    }
+    return show;
+}
+
+/**
+ 设置是否显示定时器
+ 
+ @param timer timer description
+ */
++ (void)setShowTimer:(BOOL)timer{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:[NSNumber numberWithBool:timer] forKey:kShowTimer];
+    [defaults synchronize];
+}
+
 
 @end
